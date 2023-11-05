@@ -2,12 +2,29 @@ package agh.ics.oop;
 
 public class World {
     static void run(String[] napisy){
-        System.out.println("zwierzak idzie do przodu");
-        int i=0;
-        while (!napisy[i].isEmpty()) {
-            System.out.println(napisy[i]);
-            i++;
+        for (int i = 0; i < napisy.length; i++) {
+            switch (napisy[i]){
+                case "f":
+                    System.out.println("zwierzak idzie do przodu");
+                    break;
+                case "b":
+                    System.out.println("zwierzak idzie do tyłu");
+                    break;
+                case "r":
+                    System.out.println("zwierzak skręca w prawo");
+                    break;
+                case "l":
+                    System.out.println("zwierzak idzie w lewo");
+                    break;
+                default:
+            }
+            //System.out.print(napisy[i]);
+            //if(i< napisy.length-1){
+            //    System.out.print(",");
+            //}
         }
+        //System.out.println();
+
     }
     public static void main(String[] args) {
         System.out.println("system wystartował");
