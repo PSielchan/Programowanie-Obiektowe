@@ -3,7 +3,7 @@ package agh.ics.oop;
 import agh.ics.oop.model.MoveDirection;
 
 public class OptionsParser {
-    static MoveDirection[] main(String[] args) {
+    public static MoveDirection[] main(String[] args) {
         MoveDirection[] tablica = new MoveDirection[args.length];
 
         for (int i=0;i<args.length;i++){

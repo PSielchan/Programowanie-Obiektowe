@@ -1,9 +1,14 @@
 import agh.ics.oop.OptionsParser;
 import agh.ics.oop.model.MoveDirection;
+import org.junit.jupiter.api.Test;
 
 public class OptionsParserTest {
-    public void MoveDirection(){
-        String[] Tab = new String[4];
-        Tab[0]="f";Tab[1]="f";Tab[2]="r";Tab[3]="l";
+    @Test
+    public void OptionsParser(){
+        String[] Tab = {"f","f","r","l"};
+        MoveDirection[] Tab2 = OptionsParser.main(Tab);
+        for (MoveDirection moveDirection : Tab2) {
+            System.out.println(moveDirection);
+        }
     }
 }
