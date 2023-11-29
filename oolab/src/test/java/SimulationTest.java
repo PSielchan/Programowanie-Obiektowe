@@ -1,7 +1,9 @@
 import agh.ics.oop.OptionsParser;
 import agh.ics.oop.Simulation;
 import agh.ics.oop.model.MoveDirection;
+import agh.ics.oop.model.RectangularMap;
 import agh.ics.oop.model.Vector2d;
+import agh.ics.oop.model.WorldMap;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -13,7 +15,8 @@ public class SimulationTest {
         ArrayList<MoveDirection> directions = OptionsParser.main(args);
         ArrayList<Vector2d> positions = new ArrayList<Vector2d>();
         positions.add(new Vector2d(2,2));
-        Simulation simulation = new Simulation(positions, directions);
+        WorldMap mapa = new RectangularMap(4,4);
+        Simulation simulation = new Simulation(positions, directions, mapa);
         simulation.run();
     }
     @Test
@@ -22,7 +25,8 @@ public class SimulationTest {
         ArrayList<MoveDirection> directions = OptionsParser.main(args);
         ArrayList<Vector2d> positions = new ArrayList<Vector2d>();
         positions.add(new Vector2d(2,2));
-        Simulation simulation = new Simulation(positions, directions);
+        WorldMap mapa = new RectangularMap(4,4);
+        Simulation simulation = new Simulation(positions, directions,mapa);
         simulation.run();
     }
     @Test
@@ -31,7 +35,8 @@ public class SimulationTest {
         ArrayList<MoveDirection> directions = OptionsParser.main(args);
         ArrayList<Vector2d> positions = new ArrayList<Vector2d>();
         positions.add(new Vector2d(2,2));
-        Simulation simulation = new Simulation(positions, directions);
+        WorldMap mapa = new RectangularMap(4,4);
+        Simulation simulation = new Simulation(positions, directions,mapa);
         simulation.run();
     }
 }
