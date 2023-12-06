@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import agh.ics.oop.model.*;
 
 public class Simulation {
+
+    private int licznik;
     ArrayList<Animal> animal = new ArrayList<>();
     ArrayList<MoveDirection> directions;
     WorldMap map;
@@ -12,12 +14,8 @@ public class Simulation {
         for (Vector2d vector2d : vector) {
             if (map.canMoveTo(vector2d)) {
                 animal.add(new Animal(vector2d));
+                map.place(animal.get(animal.size() - 1));
             } else {
-                System.out.println("Źle wpisane pozycje początkowe");
-            }
-        }
-        for(Animal zwierze : animal){
-            if(!this.map.place(zwierze)){
                 System.out.println("Źle wpisane pozycje początkowe");
             }
         }
@@ -26,7 +24,7 @@ public class Simulation {
     public void run(){
         for (int i=0; i<directions.size();i++){
             map.move(animal.get(i % animal.size()),directions.get(i));
-            System.out.println("Zwierzę " + i % animal.size() + " " + animal.get(i % animal.size()).toString());
+            System.out.println(map.toString());
         }
     }
 }

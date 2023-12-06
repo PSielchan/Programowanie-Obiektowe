@@ -12,7 +12,7 @@ public class SimulationTest {
     @Test
     public void Orientation(){
         String[] args= new String[]{"r", "r", "r", "r", "l", "l", "l", "l"};
-        ArrayList<MoveDirection> directions = OptionsParser.main(args);
+        ArrayList<MoveDirection> directions = OptionsParser.parse(args);
         ArrayList<Vector2d> positions = new ArrayList<Vector2d>();
         positions.add(new Vector2d(2,2));
         WorldMap mapa = new RectangularMap(4,4);
@@ -22,7 +22,7 @@ public class SimulationTest {
     @Test
     public void Position(){
         String[] args= new String[]{"f","f","r","f","f","l","l","f","f","f","f"};
-        ArrayList<MoveDirection> directions = OptionsParser.main(args);
+        ArrayList<MoveDirection> directions = OptionsParser.parse(args);
         ArrayList<Vector2d> positions = new ArrayList<Vector2d>();
         positions.add(new Vector2d(2,2));
         WorldMap mapa = new RectangularMap(4,4);
@@ -32,7 +32,7 @@ public class SimulationTest {
     @Test
     public void Borders(){
         String[] args= new String[]{"f","f","f","f","f","l","f","f","f","f","f","l","f","f","f","f","f","l","f","f","f","f","f",};
-        ArrayList<MoveDirection> directions = OptionsParser.main(args);
+        ArrayList<MoveDirection> directions = OptionsParser.parse(args);
         ArrayList<Vector2d> positions = new ArrayList<Vector2d>();
         positions.add(new Vector2d(2,2));
         WorldMap mapa = new RectangularMap(4,4);
