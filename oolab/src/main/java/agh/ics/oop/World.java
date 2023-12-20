@@ -14,5 +14,6 @@ public class World {
         Simulation simulation = new Simulation(positions, directions, mapa);
         System.out.println(mapa.toString());
         simulation.run();
+        System.out.println(mapa.getElements());
     }
 }
