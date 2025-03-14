@@ -1,1 +1,2 @@
-# PO_2023_SR1640_SIELCHANOWICZ
+# Lab5
+Interfejsy i mapy
