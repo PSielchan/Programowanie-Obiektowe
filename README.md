@@ -1,1 +1,2 @@
-# PO_2023_SR1640_SIELCHANOWICZ
+# Lab 1
+Stworzenie pierwszego projektu
