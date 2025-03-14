@@ -1,2 +1,2 @@
 # Lab 1
-Stworzenie pierwszego projektu
+Instrukcje sterujące w Javie
